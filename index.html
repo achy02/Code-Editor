@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./lib/css/styles.css" />
+
+  <title>Code Editor</title>
+</head>
+
+<body>
+  <div class="editor">
+    <div class="editor__wrapper">
+      <label for="language">Select a language</label>
+      <select id="language" onchange="setLang()" class="select">
+        <option value="python3">Python</option>
+        <option value="java">Java</option>
+        <option value="nodejs">Node JS</option>
+        <!-- <option value="reactjs">React JS</option> -->
+        <!-- <option value="csharp">C#</option> -->
+      </select>
+      <div class="editor__body">
+        <div id="editorCode" class="editor__code"></div>
+      </div>
+      <div class="editor__footer">
+        <div class="editor__footer--left">
+          <button class="editor__btn editor__run">Run ></button>
+          <button class="editor__btn editor__reset">Reset ></button>
+          <button class="editor__btn editor__download">Download</button>
+        </div>
+        <div class="editor__footer--right">
+          <div class="editor__console">
+            <pre id="p1"></pre>
+            <ul class="editor__console-logs"></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- required ace libraries -->
+  <script src="./lib/js/ace editor/src-min/ace.js"></script>
+  <script src="./lib/js/ace editor/src-min/mode-c_cpp.js"></script>
+  <script src="./lib/js/ace editor/src-min/ext-language_tools.js"></script>
+  <!-- <script src="./lib/js/ace editor/src-min/theme-github.js"></script> -->
+  <!-- custom scripts -->
+  <script src="./lib/js/editor.js"></script>
+  <script src="./lib/js/editor-console.js"></script>
+</body>
+
+</html>
